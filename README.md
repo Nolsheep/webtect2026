@@ -18,7 +18,7 @@ A space-themed group portfolio with **Nova**, an AI chat that answers questions 
 |---|---|---|---|
 | นล | Kanat Thongniyom | Backend & AI Engineer | [@Nolsheep](https://github.com/Nolsheep) |
 | เก่ง | Nitikul Keawpaitoon | Frontend Developer | [@KengJoJo](https://github.com/KengJoJo) |
-| ไทม์ | เจตนิพัทธ อินทรีย์ | DevOps & Data | - |
+| ไทม์ | เจตนิพัทธ อินทรีย์ | DevOps & Presentation | - |
 
 ## How it works
 
@@ -39,7 +39,7 @@ React (client/)  ──POST /api/chat──▶  Express (server/)  ──▶  Ty
 
 ```
 client/                React app (portfolio page + chat page)
-  src/pages/           Portfolio.jsx, Chat.jsx
+  src/pages/           Portfolio.jsx, Member.jsx (personal page), Chat.jsx
   src/components/      Navbar, Starfield (canvas background), Avatar
   src/i18n.jsx         TH/EN switch
 server/                Express API
@@ -97,12 +97,15 @@ npm run db:seed               # reloads group/members/projects, keeps chat histo
 
 The AI reads the database on every message, so new data is used immediately.
 
+Each member has a personal portfolio page at `/member/<slug>` (click a member card or a planet in the orbit). Works are grouped by `category` (`competition`, `research`, `project`, `training`, `course`, `work`). To show a picture on a work card, put the file in `client/public/works/` and set `image_url` to `/works/<file>` in `seed.sql`.
+
 ## API
 
 | Method | Path | Description |
 |---|---|---|
 | GET | `/api/health` | server + database status |
 | GET | `/api/portfolio` | group, group projects, members with projects |
+| GET | `/api/portfolio/members/:slug` | one member (`kanat`, `keng`, `time`) with projects |
 | POST | `/api/chat` | body `{ message, conversationId? }` → `{ conversationId, reply }` |
 | GET | `/api/chat/:id` | messages of a conversation |
 | DELETE | `/api/chat/:id` | delete a conversation |

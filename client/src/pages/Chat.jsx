@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { useSearchParams } from 'react-router-dom';
 import { api } from '../api.js';
 import { useLang } from '../i18n.jsx';
 
@@ -25,7 +26,8 @@ export default function Chat() {
   const { t } = useLang();
   const [conversationId, setConversationId] = useState(readId);
   const [messages, setMessages] = useState([]);
-  const [input, setInput] = useState('');
+  const [searchParams] = useSearchParams();
+  const [input, setInput] = useState(() => searchParams.get('q') ?? '');
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
   const bottomRef = useRef(null);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { api } from '../api.js';
 import { useLang } from '../i18n.jsx';
 import Avatar from '../components/Avatar.jsx';
@@ -28,7 +28,7 @@ function MemberCard({ member }) {
   const { t, pick, lang } = useLang();
   const fullName = lang === 'th' ? member.full_name_th : member.full_name_en;
   return (
-    <article className="card member" style={{ '--c': member.color }} id={`member-${member.slug}`}>
+    <Link to={`/member/${member.slug}`} className="card member" style={{ '--c': member.color }} id={`member-${member.slug}`}>
       <div className="member-top">
         <Avatar member={member} />
         <div>
@@ -42,15 +42,13 @@ function MemberCard({ member }) {
       <div className="chips">
         {member.skills.map((s) => <span key={s}>{s}</span>)}
       </div>
-      <h4>{t('projects')}</h4>
-      <ul className="projects">
-        {member.projects.map((p) => <ProjectItem key={p.id} project={p} />)}
+      <h4>{t('projects')} · {member.projects.length}</h4>
+      <ul className="mini-works">
+        {member.projects.slice(0, 3).map((p) => <li key={p.id}>{pick(p, 'title')}</li>)}
+        {member.projects.length > 3 && <li className="muted">+{member.projects.length - 3}</li>}
       </ul>
-      <div className="links">
-        {member.email && <a href={`mailto:${member.email}`}>✉ {member.email}</a>}
-        {member.github && <a href={member.github} target="_blank" rel="noreferrer">⌥ {t('viewGithub')}</a>}
-      </div>
-    </article>
+      <span className="btn primary small view-profile">{t('viewProfile')} →</span>
+    </Link>
   );
 }
 
@@ -59,9 +57,16 @@ export default function Portfolio() {
   const [data, setData] = useState(null);
   const [error, setError] = useState('');
 
+  const { hash } = useLocation();
+
   useEffect(() => {
     api.getPortfolio().then(setData).catch((e) => setError(e.message));
   }, []);
+
+  // e.g. coming back from a member page to /#crew
+  useEffect(() => {
+    if (data && hash) document.getElementById(hash.slice(1))?.scrollIntoView();
+  }, [data, hash]);
 
   if (error) return <main className="page"><div className="card notice">{t('loadError')}<br /><small>{error}</small></div></main>;
   if (!data) return <main className="page"><div className="loading">{t('loading')}</div></main>;
@@ -89,12 +94,12 @@ export default function Portfolio() {
         </div>
 
         {/* Orbit visual: each member is a planet orbiting the group */}
-        <div className="card orbit-card" aria-hidden="true">
+        <div className="card orbit-card">
           <div className="orbit-system">
             <div className="sun">✦</div>
             {members.map((m, i) => (
               <div key={m.id} className={`orbit orbit-${i + 1}`}>
-                <span className="orbiter" style={{ '--c': m.color }}>{m.nickname_th}</span>
+                <Link to={`/member/${m.slug}`} className="orbiter" style={{ '--c': m.color }}>{m.nickname_th}</Link>
               </div>
             ))}
           </div>

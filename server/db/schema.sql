@@ -65,3 +65,7 @@ CREATE TABLE IF NOT EXISTS messages (
 );
 
 CREATE INDEX IF NOT EXISTS idx_messages_conversation ON messages(conversation_id, id);
+
+-- v2: extra project fields for the member profile pages
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS category  TEXT;  -- competition | research | course | training | work | group
+ALTER TABLE projects ADD COLUMN IF NOT EXISTS image_url TEXT;  -- e.g. /works/kanat-hackathon.jpg (put files in client/public/works)

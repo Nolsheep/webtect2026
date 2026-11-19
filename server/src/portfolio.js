@@ -21,7 +21,7 @@ function projectLines(projects, owner) {
   if (!projects.length) return '  - (none listed yet)';
   return projects
     .map((p) => {
-      const meta = [p.year, p.tech?.length ? `tech: ${p.tech.join(', ')}` : null, p.link]
+      const meta = [p.category, p.year, p.tech?.length ? `tech: ${p.tech.join(', ')}` : null, p.link]
         .filter(Boolean)
         .join(' | ');
       return `  - [owner: ${owner}] ${p.title_en} / ${p.title_th}${meta ? ` (${meta})` : ''}\n    EN: ${p.description_en ?? ''}\n    TH: ${p.description_th ?? ''}`;

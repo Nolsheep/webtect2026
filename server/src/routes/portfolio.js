@@ -9,5 +9,13 @@ export function portfolioRouter(pool) {
     res.json(await getPortfolio(pool));
   });
 
+  // GET /api/portfolio/members/:slug -> one member with projects
+  router.get('/members/:slug', async (req, res) => {
+    const { members } = await getPortfolio(pool);
+    const member = members.find((m) => m.slug === req.params.slug);
+    if (!member) return res.status(404).json({ error: 'member not found' });
+    res.json(member);
+  });
+
   return router;
 }

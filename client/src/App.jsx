@@ -3,6 +3,7 @@ import Starfield from './components/Starfield.jsx';
 import Navbar from './components/Navbar.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Chat from './pages/Chat.jsx';
+import Member from './pages/Member.jsx';
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/member/:slug" element={<Member />} />
         <Route path="*" element={<Portfolio />} />
       </Routes>
     </>

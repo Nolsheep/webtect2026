@@ -43,6 +43,16 @@ test('GET /api/portfolio returns group and members', async (t) => {
   assert.ok(Array.isArray(res.body.members[0].projects));
 });
 
+test('GET /api/portfolio/members/:slug', async (t) => {
+  if (!dbReady) return t.skip('no database');
+  const ok = await request(app()).get('/api/portfolio/members/kanat');
+  assert.equal(ok.status, 200);
+  assert.equal(ok.body.nickname_en, 'Nol');
+  assert.ok(ok.body.projects.length > 0);
+  const missing = await request(app()).get('/api/portfolio/members/nobody');
+  assert.equal(missing.status, 404);
+});
+
 test('POST /api/chat saves history and sends portfolio context to AI', async (t) => {
   if (!dbReady) return t.skip('no database');
   const first = await request(app()).post('/api/chat').send({ message: 'Who is Nol?' });
