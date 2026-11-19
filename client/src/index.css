@@ -282,5 +282,6 @@ a.card.member { cursor: pointer; }
 }
 /* certificate / work images: show the whole picture, click to open full size */
 .work-cover-link { display: block; background: #0d0a24; cursor: zoom-in; }
-.work-cover-link .work-cover { object-fit: contain; padding: 10px; transition: transform 0.3s; }
+.work-cover-link { overflow: hidden; }
+.work-cover-link .work-cover { aspect-ratio: auto; height: auto; max-height: 460px; object-fit: contain; transition: transform 0.3s; }
 .work-cover-link:hover .work-cover { transform: scale(1.04); }

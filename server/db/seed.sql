@@ -32,8 +32,8 @@ VALUES
   'kanat', 'นล', 'Nol', 'คเณศร์ ทองนิยม', 'Kanat Thongniyom',
   'Backend & AI Engineer',
   'Backend & AI Engineer',
-  'นักศึกษาปี 3 สาขา AI และ Data Science สนใจ Machine Learning, Deep Learning และ Computer Vision ตอนนี้โฟกัสที่ Deep Learning และ NLP ในโปรเจกต์นี้ดูแล Express API, ฐานข้อมูล และการเชื่อมต่อ AI',
-  'Third-year AI & Data Science student interested in Machine Learning, Deep Learning and Computer Vision, currently focusing on Deep Learning and NLP. In this project he owns the Express API, the database and the AI integration.',
+  'สนใจด้าน AI และ Business ชอบลงแข่ง Hackathon และ Business Case Competition เรียนปี 3 สาขา AI และ Data Science โฟกัส Machine Learning, Deep Learning, Computer Vision และ NLP ในโปรเจกต์นี้ดูแล Express API, ฐานข้อมูล และการเชื่อมต่อ AI',
+  'Interested in AI and business, and loves competing in hackathons and business case competitions. A third-year AI & Data Science student focusing on Machine Learning, Deep Learning, Computer Vision and NLP. In this project he owns the Express API, the database and the AI integration.',
   ARRAY['Python', 'SQL', 'Scikit-learn', 'Pandas', 'TensorFlow / Keras', 'CNN', 'Matplotlib / Seaborn', 'MySQL', 'Node.js / Express', 'Figma', 'Tableau', 'Generative AI (ChatGPT, Gemini)'],
   'nonkanat@gmail.com', 'https://github.com/Nolsheep', NULL, '#8b5cf6', 1
 ),
