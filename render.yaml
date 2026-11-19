@@ -1,0 +1,31 @@
+# Render Blueprint: one web service (Express serves the React build) + one PostgreSQL database.
+# Deploys are triggered by GitHub Actions (see .github/workflows/ci.yml), so autoDeploy is off.
+services:
+  - type: web
+    name: webtect2026
+    runtime: node
+    plan: free
+    autoDeploy: false
+    buildCommand: npm run build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: webtect-db
+          property: connectionString
+      # Internal Render connection string; set to "true" if you use the External URL instead
+      - key: DATABASE_SSL
+        value: "false"
+      - key: TYPHOON_API_KEY
+        sync: false
+      - key: TYPHOON_MODEL
+        value: typhoon-v2.5-30b-a3b-instruct
+
+databases:
+  - name: webtect-db
+    plan: free
+    databaseName: webtect
+    user: webtect

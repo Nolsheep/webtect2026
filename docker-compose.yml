@@ -1,0 +1,18 @@
+# Local PostgreSQL for development:  docker compose up -d
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: webtect
+      POSTGRES_PASSWORD: webtect
+      POSTGRES_DB: webtect
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U webtect"]
+      interval: 5s
+      retries: 10
+volumes:
+  pgdata:
