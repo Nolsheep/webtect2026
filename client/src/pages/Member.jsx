@@ -13,7 +13,9 @@ function WorkCard({ project }) {
   return (
     <article className="card work">
       {project.image_url ? (
-        <img className="work-cover" src={project.image_url} alt={pick(project, 'title')} loading="lazy" />
+        <a href={project.image_url} target="_blank" rel="noreferrer" className="work-cover-link" title={t('viewFull')}>
+          <img className="work-cover" src={project.image_url} alt={pick(project, 'title')} loading="lazy" />
+        </a>
       ) : (
         <div className="work-cover placeholder" aria-hidden="true">{CATEGORY_ICON[cat] ?? '✦'}</div>
       )}

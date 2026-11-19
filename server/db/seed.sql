@@ -101,7 +101,7 @@ INSERT INTO projects (member_id, category, title_th, title_en, description_th, d
 (1, 'training', 'MyOrder The Next Gen #1 Boot Camp', 'MyOrder The Next Gen #1 Boot Camp',
  'ผ่านการอบรมด้าน Business Analysis, UX/UI ด้วย Figma, การทดสอบแอป และการ pitch proposal',
  'Completed training in business analysis, UX/UI prototyping with Figma, application testing and proposal pitching.',
- ARRAY['Figma', 'Business Analysis', 'Testing'], '2024', NULL, NULL, 9),
+ ARRAY['Figma', 'Business Analysis', 'Testing'], '2024', NULL, '/works/kanat-nextgen-certificate.jpg', 9),
 (1, 'course', 'จำแนกสุขภาพต้นไม้ด้วย Random Forest', 'Tree health classification',
  'โปรเจกต์วิชา AIE 314 Data Preparation and Data Mining เตรียมข้อมูลและใช้ Random Forest จำแนกสุขภาพของต้นไม้',
  'AIE 314 (Data Preparation & Data Mining) project: prepared the data and used Random Forest to classify the health of trees.',
