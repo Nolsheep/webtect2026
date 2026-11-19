@@ -286,3 +286,4 @@ a.card.member { cursor: pointer; }
 .work-cover-link .work-cover { aspect-ratio: auto; height: auto; max-height: 460px; object-fit: contain; transition: transform 0.3s; }
 .work-cover-link:hover .work-cover { transform: scale(1.04); }
 .works-grid { align-items: start; }
+img.avatar { border: 3px solid var(--c); box-shadow: 0 0 24px color-mix(in srgb, var(--c) 60%, transparent); }

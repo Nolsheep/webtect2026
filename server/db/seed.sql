@@ -35,7 +35,7 @@ VALUES
   'สนใจด้าน AI และ Business ชอบลงแข่ง Hackathon และ Business Case Competition เรียนปี 3 สาขา AI และ Data Science โฟกัส Machine Learning, Deep Learning, Computer Vision และ NLP ในโปรเจกต์นี้ดูแล Express API, ฐานข้อมูล และการเชื่อมต่อ AI',
   'Interested in AI and business, and loves competing in hackathons and business case competitions. A third-year AI & Data Science student focusing on Machine Learning, Deep Learning, Computer Vision and NLP. In this project he owns the Express API, the database and the AI integration.',
   ARRAY['Python', 'SQL', 'Scikit-learn', 'Pandas', 'TensorFlow / Keras', 'CNN', 'Matplotlib / Seaborn', 'MySQL', 'Node.js / Express', 'Figma', 'Tableau', 'Generative AI (ChatGPT, Gemini)'],
-  'nonkanat@gmail.com', 'https://github.com/Nolsheep', NULL, '#8b5cf6', 1
+  'nonkanat@gmail.com', 'https://github.com/Nolsheep', '/members/kanat.jpg', '#8b5cf6', 1
 ),
 (
   'keng', 'เก่ง', 'Keng', 'นิติกุล แก้วไพฑูรย์', 'Nitikul Keawpaitoon',   -- TODO: check Thai spelling
@@ -44,7 +44,7 @@ VALUES
   'นักศึกษา AI ที่มีทักษะด้าน cybersecurity, การออกแบบเก็บข้อมูลเชิงสถิติ และการปรับปรุง workflow เคยสร้างระบบเช็กชื่ออัตโนมัติด้วย Line Beacon และ Firebase มีประสบการณ์ด้าน operations และการจัดเวิร์กช็อปนวัตกรรม',
   'AI student with skills in cybersecurity, statistical data design and workflow optimization. Built an automated attendance system with Line Beacon and Firebase, and has hands-on experience in operations and running innovation workshops.',
   ARRAY['React', 'JavaScript', 'HTML / CSS', 'Python', 'MySQL', 'Git / GitHub', 'Firebase', 'Google Sheets automation', 'Generative AI', 'Workflow design'],
-  'nitikul.keaw@bumail.net', 'https://github.com/KengJoJo', NULL, '#22d3ee', 2
+  'nitikul.keaw@bumail.net', 'https://github.com/KengJoJo', '/members/keng.jpg', '#22d3ee', 2
 ),
 (
   'time', 'ไทม์', 'Time', 'เจตนิพัทธ อินทรีย์', 'Jetniphat Intharee',     -- TODO: check English spelling
@@ -54,7 +54,7 @@ VALUES
   'Third-year AI & Data Science student who has loved hardware and robotics since high school. Won the STEAM Drone & Coding competition, builds dashboards in Looker Studio, and has a foundation in Python, NLP and Arduino.',
   ARRAY['Python', 'NLP basics', 'Looker Studio', 'MySQL', 'HTML', 'Arduino', 'Drones', 'Microsoft Excel / Word', 'GitHub Actions', 'Render'],
   'Jetniphat28@gmail.com', NULL,                      -- TODO: GitHub
-  NULL, '#f472b6', 3
+  '/members/time.jpg', '#f472b6', 3
 );
 
 INSERT INTO projects (member_id, category, title_th, title_en, description_th, description_en, tech, year, link, image_url, sort_order) VALUES
