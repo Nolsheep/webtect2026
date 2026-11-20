@@ -32,8 +32,8 @@ VALUES
   'kanat', 'นล', 'Nol', 'คเณศร์ ทองนิยม', 'Kanat Thongniyom',
   'Backend & AI Engineer',
   'Backend & AI Engineer',
-  'สนใจด้าน AI และ Business ชอบลงแข่ง Hackathon และ Business Case Competition เรียนปี 3 สาขา AI และ Data Science โฟกัส Machine Learning, Deep Learning, Computer Vision และ NLP ในโปรเจกต์นี้ดูแล Express API, ฐานข้อมูล และการเชื่อมต่อ AI',
-  'Interested in AI and business, and loves competing in hackathons and business case competitions. A third-year AI & Data Science student focusing on Machine Learning, Deep Learning, Computer Vision and NLP. In this project he owns the Express API, the database and the AI integration.',
+  'สนใจด้าน AI และ Business ชอบลงแข่ง Hackathon และ Business Case Competition เป็นนักศึกษาสาขา AI และ Data Science โฟกัส Machine Learning, Deep Learning, Computer Vision และ NLP ในโปรเจกต์นี้ดูแล Express API, ฐานข้อมูล และการเชื่อมต่อ AI',
+  'Interested in AI and business, and loves competing in hackathons and business case competitions. An AI & Data Science student focusing on Machine Learning, Deep Learning, Computer Vision and NLP. In this project he owns the Express API, the database and the AI integration.',
   ARRAY['Python', 'SQL', 'Scikit-learn', 'Pandas', 'TensorFlow / Keras', 'CNN', 'Matplotlib / Seaborn', 'MySQL', 'Node.js / Express', 'Figma', 'Tableau', 'Generative AI (ChatGPT, Gemini)'],
   'nonkanat@gmail.com', 'https://github.com/Nolsheep', '/members/kanat.jpg', '#8b5cf6', 1
 ),
@@ -50,8 +50,8 @@ VALUES
   'time', 'ไทม์', 'Time', 'เจตนิพัทธ อินทรีย์', 'Jetniphat Intharee',     -- TODO: check English spelling
   'DevOps & Presentation',
   'DevOps & Presentation',
-  'นักศึกษาปี 3 สาขา AI และ Data Science ชอบงานฮาร์ดแวร์และหุ่นยนต์มาตั้งแต่มัธยม เคยชนะการแข่งขัน STEAM Drone & Coding ถนัดทำ Dashboard ด้วย Looker Studio และมีพื้นฐาน Python, NLP และ Arduino',
-  'Third-year AI & Data Science student who has loved hardware and robotics since high school. Won the STEAM Drone & Coding competition, builds dashboards in Looker Studio, and has a foundation in Python, NLP and Arduino.',
+  'นักศึกษาสาขา AI และ Data Science ชอบงานฮาร์ดแวร์และหุ่นยนต์มาตั้งแต่มัธยม เคยชนะการแข่งขัน STEAM Drone & Coding ถนัดทำ Dashboard ด้วย Looker Studio และมีพื้นฐาน Python, NLP และ Arduino',
+  'AI & Data Science student who has loved hardware and robotics since high school. Won the STEAM Drone & Coding competition, builds dashboards in Looker Studio, and has a foundation in Python, NLP and Arduino.',
   ARRAY['Python', 'NLP basics', 'Looker Studio', 'MySQL', 'HTML', 'Arduino', 'Drones', 'Microsoft Excel / Word', 'GitHub Actions', 'Render'],
   'Jetniphat28@gmail.com', NULL,                      -- TODO: GitHub
   '/members/time.jpg', '#f472b6', 3
